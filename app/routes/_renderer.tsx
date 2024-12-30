@@ -20,7 +20,9 @@ export default jsxRenderer(({ children, frontmatter }) => {
       </head>
       <body>
         <header>
-          <h1 className="text-3xl font-bold text-blue-500">vsav</h1>
+          <h1 className="text-3xl font-bold text-blue-500">
+            <a href="/">vsav</a>
+          </h1>
         </header>
         {children}
       </body>
