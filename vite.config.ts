@@ -6,13 +6,29 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
 
-export default defineConfig({
-  plugins: [
-    honox({ devServer: { adapter } }),
-    mdx({
-      jsxImportSource: "hono/jsx",
-      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-    }),
-    build(),
-  ],
+export default defineConfig(({ mode }) => {
+  console.log(mode);
+  if (mode === "client") {
+    return {
+      build: {
+        rollupOptions: {
+          input: ["/app/style.css"],
+          output: {
+            assetFileNames: "static/assets/[name].[ext]",
+          },
+        },
+      },
+    };
+  } else {
+    return {
+      plugins: [
+        honox({ devServer: { adapter } }),
+        mdx({
+          jsxImportSource: "hono/jsx",
+          remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+        }),
+        build(),
+      ],
+    };
+  }
 });
