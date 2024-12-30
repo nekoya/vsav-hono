@@ -1,11 +1,6 @@
-import { createRoute } from "honox/factory";
-import type { Meta } from "../types";
+import type { Meta } from "../../types";
 
-export default createRoute((c) => {
-  return c.redirect("/ja/");
-});
-
-function Top() {
+export default function Top() {
   const posts = import.meta.glob<{ frontmatter: Meta }>("./posts/*.mdx", {
     eager: true,
   });
