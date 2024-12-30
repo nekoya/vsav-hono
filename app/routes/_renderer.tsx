@@ -18,9 +18,9 @@ export default jsxRenderer(({ children, frontmatter }) => {
         <Script src="/app/client.ts" async />
         <Style />
       </head>
-      <body className="bg-zinc-950 p-4 text-zinc-50">
+      <body class="bg-zinc-950 p-4 text-zinc-50">
         <header>
-          <h1 className="text-3xl font-bold text-rose-700">
+          <h1 class="text-3xl font-bold text-rose-700">
             <a href="/">vsav</a>
           </h1>
         </header>
