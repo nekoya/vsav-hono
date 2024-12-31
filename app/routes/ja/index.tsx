@@ -12,12 +12,12 @@ export default function Top() {
   return (
     <div>
       <h2 class="mt-4 text-xl">対戦攻略</h2>
-      <ul class="mt-2 flex max-w-3xl flex-wrap">
+      <ul class="ml-2 mt-4">
         {Object.entries(posts).map(([id, module]) => {
           if (module.frontmatter) {
             const title = module.frontmatter.title;
             return (
-              <li class="ml-2 mt-2 min-w-32 flex-1">
+              <li class="mt-2">
                 <a
                   href={id.replace(/.mdx$/, "")}
                   class="text-indigo-300 underline"
@@ -29,7 +29,7 @@ export default function Top() {
           }
         })}
       </ul>
-      <h2 class="mt-4 text-xl">キャラクター紹介</h2>
+      <h2 class="mt-8 text-xl">キャラクター紹介</h2>
       <ul class="mt-2 flex max-w-3xl flex-wrap">
         {Object.entries(characters).map(([id, module]) => {
           if (module.frontmatter) {
