@@ -1,4 +1,5 @@
 import { jsxRenderer } from "hono/jsx-renderer";
+import { ColorTable } from "../../../components/ColorTable";
 import { getCharacterName } from "../../../domains/character";
 
 export default jsxRenderer(({ children, Layout, frontmatter }) => {
@@ -14,6 +15,9 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
           <p class="mt-2 text-sm text-zinc-200">{frontmatter.tagline}</p>
         )}
       </hgroup>
+      <div class="mt-2">
+        <ColorTable name={frontmatter.name} />
+      </div>
       <article class="mt-2">{children}</article>
     </Layout>
   );
