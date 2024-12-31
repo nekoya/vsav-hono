@@ -5,15 +5,15 @@
 @layer base {
   article {
     h1 {
-      @apply mb-4 text-4xl font-bold;
+      @apply mt-4 text-xl;
     }
 
     h2 {
-      @apply mb-4 text-2xl;
+      @apply mt-4 text-xl;
     }
 
     p {
-      @apply mb-4 text-base leading-7;
+      @apply mt-2;
     }
   }
 }
