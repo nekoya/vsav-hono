@@ -8,7 +8,7 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
   return (
     <Layout title={`キャラクター紹介 ${name}`}>
       <hgroup>
-        <h1 class="mt-4 flex items-center gap-2 text-xl">
+        <h1 class="mt-4 flex items-center gap-2 text-3xl">
           <img src={`/static/characters/${frontmatter.name}_lp.gif`} />
           {name}
         </h1>
@@ -16,7 +16,7 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
           <p class="mt-2 text-sm text-zinc-200">{frontmatter.tagline}</p>
         )}
       </hgroup>
-      <div class="mt-2">
+      <div class="mt-4">
         <ColorTable name={frontmatter.name} />
       </div>
       <article class="mt-2">{children}</article>

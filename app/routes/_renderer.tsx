@@ -21,10 +21,13 @@ export default jsxRenderer(({ children, title }) => {
       <body class="bg-zinc-950 p-4 text-zinc-50">
         <header>
           <h1 class="text-3xl font-bold text-rose-700">
-            <a href="/">vsav</a>
+            <a href="/">vsav.nekoya.dev</a>
           </h1>
         </header>
         {children}
+        <footer class="mt-8 text-center text-sm text-zinc-400">
+          <p>- vsav.nekoya.dev -</p>
+        </footer>
       </body>
     </html>
   );
