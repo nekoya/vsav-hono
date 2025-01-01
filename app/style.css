@@ -9,7 +9,11 @@
     }
 
     h2 {
-      @apply mt-4 text-xl;
+      @apply mt-8 bg-rose-950 p-1 text-lg;
+    }
+
+    h3 {
+      @apply mt-6 border-b border-zinc-500 pb-0.5 text-lg;
     }
 
     p {
@@ -21,7 +25,11 @@
     }
 
     ol {
-      @apply list-inside list-decimal;
+      @apply my-4 list-inside list-decimal;
+    }
+
+    ul {
+      @apply my-4 list-inside list-disc;
     }
 
     a {
