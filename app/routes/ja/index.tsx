@@ -9,11 +9,35 @@ export default function Top() {
   const posts = import.meta.glob<{ frontmatter: Meta }>("./posts/*.mdx", {
     eager: true,
   });
+  const techniques = import.meta.glob<{ frontmatter: Meta }>(
+    "./techniques/*.mdx",
+    {
+      eager: true,
+    },
+  );
   return (
     <div>
       <h2 class="mt-4 text-xl">対戦攻略</h2>
       <ul class="ml-2 mt-4">
         {Object.entries(posts).map(([id, module]) => {
+          if (module.frontmatter) {
+            const title = module.frontmatter.title;
+            return (
+              <li class="mt-2">
+                <a
+                  href={id.replace(/.mdx$/, "")}
+                  class="text-indigo-300 underline"
+                >
+                  {title}
+                </a>
+              </li>
+            );
+          }
+        })}
+      </ul>
+      <h2 class="mt-4 text-xl">テクニック</h2>
+      <ul class="ml-2 mt-4">
+        {Object.entries(techniques).map(([id, module]) => {
           if (module.frontmatter) {
             const title = module.frontmatter.title;
             return (
