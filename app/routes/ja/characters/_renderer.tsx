@@ -21,7 +21,7 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
       </div>
       <article class="mt-2">{children}</article>
       <div class="my-8 text-center">
-        <BackButton href="/ja/">戻る</BackButton>
+        <BackButton href="/ja/">トップに戻る</BackButton>
       </div>
     </Layout>
   );
