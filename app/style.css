@@ -16,6 +16,10 @@
       @apply mt-6 border-b border-zinc-500 pb-0.5 text-lg;
     }
 
+    h4 {
+      @apply mt-6 text-lg;
+    }
+
     p {
       @apply my-4;
     }
