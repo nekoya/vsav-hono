@@ -26,7 +26,9 @@ export function ColorTable(props: { name: string }) {
         <tr>
           {colors.map((color) => (
             <td key={color} class="p-1.5">
-              <img src={`/static/characters/${props.name}_${color}.gif`} />
+              <img
+                src={`/static/characters/icons/${props.name}_${color}.gif`}
+              />
             </td>
           ))}
         </tr>

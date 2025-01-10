@@ -9,7 +9,7 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
     <Layout title={`キャラクター紹介 ${name}`}>
       <hgroup>
         <h1 class="mt-4 flex items-center gap-2 text-3xl">
-          <img src={`/static/characters/${frontmatter.name}_lp.gif`} />
+          <img src={`/static/characters/icons/${frontmatter.name}_lp.gif`} />
           {name}
         </h1>
         {frontmatter.tagline && (

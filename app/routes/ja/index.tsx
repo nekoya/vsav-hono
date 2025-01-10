@@ -65,7 +65,7 @@ export default function Top() {
                   class="flex items-center gap-2 text-indigo-300 underline"
                 >
                   <img
-                    src={`/static/characters/${name}_lp.gif`}
+                    src={`/static/characters/icons/${name}_lp.gif`}
                     class="h-8 w-8"
                   />
                   {getCharacterName(name)}
