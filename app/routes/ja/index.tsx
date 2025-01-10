@@ -53,6 +53,14 @@ export default function Top() {
           }
         })}
       </ul>
+      <h2 class="mt-4 text-xl">データ</h2>
+      <ul class="ml-2 mt-4">
+        <li class="mt-2">
+          <a href="./statistics/hitBox" class="text-indigo-300 underline">
+            各キャラの当たり判定
+          </a>
+        </li>
+      </ul>
       <h2 class="mt-8 text-xl">キャラクター紹介</h2>
       <ul class="mt-2 flex max-w-3xl flex-wrap">
         {Object.entries(characters).map(([id, module]) => {
