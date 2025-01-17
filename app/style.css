@@ -39,6 +39,10 @@
     a {
       @apply text-indigo-300 underline;
     }
+
+    .twitter-tweet {
+      @apply mx-auto;
+    }
   }
 }
 
