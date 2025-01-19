@@ -17,6 +17,7 @@ export default function Top() {
   );
   return (
     <div>
+      <p>ヴァンパイアセイヴァー攻略</p>
       <h2 class="mt-4 text-xl">対戦攻略</h2>
       <ul class="ml-2 mt-4">
         {Object.entries(posts).map(([id, module]) => {
