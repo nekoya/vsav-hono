@@ -3,6 +3,7 @@ import adapter from "@hono/vite-dev-server/cloudflare";
 import mdx from "@mdx-js/rollup";
 import honox from "honox/vite";
 import remarkFrontmatter from "remark-frontmatter";
+import remarkGfm from "remark-gfm";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
 
@@ -25,7 +26,7 @@ export default defineConfig(({ mode }) => {
         honox({ devServer: { adapter } }),
         mdx({
           jsxImportSource: "hono/jsx",
-          remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+          remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
         }),
         build(),
       ],
