@@ -19,6 +19,14 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
       <div class="mt-4">
         <ColorTable name={frontmatter.name} />
       </div>
+      <article class="mt-4">
+        <h2>技の説明</h2>
+        <ul>
+          <li>
+            <a href={`/ja/commands/${frontmatter.name}`}>コマンド一覧</a>
+          </li>
+        </ul>
+      </article>
       <article class="mt-2">{children}</article>
       <div class="my-8 text-center">
         <BackButton href="/ja/">トップに戻る</BackButton>

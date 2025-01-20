@@ -29,15 +29,35 @@
     }
 
     ol {
-      @apply my-4 list-inside list-decimal;
+      @apply my-4 ml-1 list-inside list-decimal;
     }
 
     ul {
-      @apply my-4 list-inside list-disc;
+      @apply my-4 ml-1 list-inside list-disc;
     }
 
     a {
       @apply text-indigo-300 underline;
+    }
+
+    pre {
+      @apply mt-4 rounded-md border border-zinc-600 bg-zinc-800 p-2;
+    }
+
+    code {
+      @apply font-sans tracking-wide;
+    }
+
+    th {
+      @apply whitespace-nowrap border border-zinc-500 bg-zinc-700 px-2 py-1 text-left font-normal;
+    }
+
+    td {
+      @apply whitespace-nowrap border border-zinc-500 px-2 py-1 text-left;
+    }
+
+    td img {
+      @apply my-0 mr-1 inline;
     }
 
     .twitter-tweet {
