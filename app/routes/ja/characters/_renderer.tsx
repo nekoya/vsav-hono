@@ -1,29 +1,38 @@
-import { jsxRenderer } from "hono/jsx-renderer";
+import { jsxRenderer, useRequestContext } from "hono/jsx-renderer";
 import { BackButton } from "../../../components/BackButton";
 import { ColorTable } from "../../../components/ColorTable";
-import { getCharacterName } from "../../../domains/character";
+import { characters } from "../../../domains/character";
 
 export default jsxRenderer(({ children, Layout, frontmatter }) => {
-  const name = getCharacterName(frontmatter.name);
+  const c = useRequestContext();
+  const path = c.req.path.split("/").pop();
+  const character = characters.find((v) => v.id === path);
+  if (character === undefined) {
+    return (
+      <Layout title="not found">
+        <div>not found</div>
+      </Layout>
+    );
+  }
   return (
-    <Layout title={`キャラクター紹介 ${name}`}>
+    <Layout title={`キャラクター紹介 ${character.name}`}>
       <hgroup>
         <h1 class="mt-4 flex items-center gap-2 text-3xl">
-          <img src={`/static/characters/icons/${frontmatter.name}_lp.gif`} />
-          {name}
+          <img src={`/static/characters/icons/${character.id}_lp.gif`} />
+          {character.name}
         </h1>
         {frontmatter.tagline && (
           <p class="mt-2 text-sm text-zinc-200">{frontmatter.tagline}</p>
         )}
       </hgroup>
       <div class="mt-4">
-        <ColorTable name={frontmatter.name} />
+        <ColorTable name={character.id} />
       </div>
       <article class="mt-4">
         <h2>技の説明</h2>
         <ul>
           <li>
-            <a href={`/ja/commands/${frontmatter.name}`}>コマンド一覧</a>
+            <a href={`/ja/commands/${character.id}`}>コマンド一覧</a>
           </li>
         </ul>
       </article>
