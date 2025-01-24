@@ -1,5 +1,5 @@
 export type Meta = {
-  name: string;
+  name?: string;
   title?: string;
   tagline?: string;
 };
