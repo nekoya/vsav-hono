@@ -6,6 +6,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
+import remarkCharacterImage from "./app/remark/CharacterImage";
 
 export default defineConfig(({ mode }) => {
   console.log(mode);
@@ -26,7 +27,12 @@ export default defineConfig(({ mode }) => {
         honox({ devServer: { adapter } }),
         mdx({
           jsxImportSource: "hono/jsx",
-          remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
+          remarkPlugins: [
+            remarkFrontmatter,
+            remarkMdxFrontmatter,
+            remarkGfm,
+            remarkCharacterImage,
+          ],
         }),
         build(),
       ],

@@ -1,5 +1,6 @@
 import { jsxRenderer, useRequestContext } from "hono/jsx-renderer";
 import { BackButton } from "../../../components/BackButton";
+import { CharacterImage } from "../../../components/CharacterImage";
 import { ColorTable } from "../../../components/ColorTable";
 import { characters } from "../../../domains/character";
 
@@ -18,7 +19,7 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
     <Layout title={`キャラクター紹介 ${character.name}`}>
       <hgroup>
         <h1 class="mt-4 flex items-center gap-2 text-3xl">
-          <img src={`/static/characters/icons/${character.id}_lp.gif`} />
+          <CharacterImage name={character.id} />
           {character.name}
         </h1>
         {frontmatter.tagline && (
