@@ -1,3 +1,5 @@
+import { CharacterImage } from "./CharacterImage";
+
 const colors = ["lp", "mp", "hp", "lk", "mk", "hk", "pp", "kk"];
 const colorLabel = new Map([
   ["lp", "小P"],
@@ -26,9 +28,7 @@ export function ColorTable(props: { name: string }) {
         <tr>
           {colors.map((color) => (
             <td key={color} class="p-1.5">
-              <img
-                src={`/static/characters/icons/${props.name}_${color}.gif`}
-              />
+              <CharacterImage name={props.name} color={color} />
             </td>
           ))}
         </tr>

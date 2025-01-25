@@ -1,5 +1,6 @@
 import { jsxRenderer, useRequestContext } from "hono/jsx-renderer";
 import { BackButton } from "../../../components/BackButton";
+import { CharacterImage } from "../../../components/CharacterImage";
 import { characters } from "../../../domains/character";
 
 export default jsxRenderer(({ children, Layout, frontmatter }) => {
@@ -16,7 +17,7 @@ export default jsxRenderer(({ children, Layout, frontmatter }) => {
   return (
     <Layout title={`コマンド一覧 ${character.name}`}>
       <h1 class="mt-4 flex items-center gap-2 text-3xl">
-        <img src={`/static/characters/icons/${character.id}_lp.gif`} />
+        <CharacterImage name={character.id} />
         {character.name}
       </h1>
       <article class="mt-2">

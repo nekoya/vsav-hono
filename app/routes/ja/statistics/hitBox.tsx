@@ -1,3 +1,4 @@
+import { CharacterImage } from "../../../components/CharacterImage";
 import { characters } from "../../../domains/character";
 import { sortByKey } from "../../../domains/utils";
 
@@ -89,10 +90,7 @@ function HeightTable(props: {
         {props.rows.map((row) => (
           <tr key={row.id}>
             <td class="flex items-center gap-2 whitespace-nowrap border border-zinc-500 px-2 py-1 text-left">
-              <img
-                src={`/static/characters/icons/${row.id}_lp.gif`}
-                class="m-0 h-8 w-8"
-              />
+              <CharacterImage name={row.id} class="m-0 h-8 w-8" />
               {row.name}
             </td>
             <td class="whitespace-nowrap border border-zinc-500 px-2 py-1 text-right">

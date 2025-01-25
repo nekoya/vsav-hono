@@ -1,3 +1,4 @@
+import { CharacterImage } from "../../components/CharacterImage";
 import { characters } from "../../domains/character";
 import type { Meta } from "../../types";
 
@@ -67,10 +68,7 @@ export default function Top() {
                 href={`./characters/${v.id}`}
                 class="flex items-center gap-2 text-indigo-300 underline"
               >
-                <img
-                  src={`/static/characters/icons/${v.id}_lp.gif`}
-                  class="h-8 w-8"
-                />
+                <CharacterImage name={v.id} />
                 {v.name}
               </a>
             </li>
