@@ -3,6 +3,12 @@ import { characters } from "../../domains/character";
 import type { Meta } from "../../types";
 
 export default function Top() {
+  const beginners = import.meta.glob<{ frontmatter: Meta }>(
+    "./beginner/*.mdx",
+    {
+      eager: true,
+    },
+  );
   const posts = import.meta.glob<{ frontmatter: Meta }>("./posts/*.mdx", {
     eager: true,
   });
@@ -15,7 +21,28 @@ export default function Top() {
   return (
     <div>
       <p>ヴァンパイアセイヴァー攻略</p>
-      <h2 class="mt-4 text-xl">対戦攻略</h2>
+      <h2 class="mt-4 text-xl">初心者攻略</h2>
+      <p class="m-2 text-sm text-neutral-400">
+        CPU戦クリアからオンライン対戦あるいはゲーセンデビューぐらいを目標にした内容です。
+      </p>
+      <ul class="ml-2 mt-3">
+        {Object.entries(beginners).map(([id, module]) => {
+          if (module.frontmatter) {
+            const title = module.frontmatter.title;
+            return (
+              <li class="mt-2">
+                <a
+                  href={id.replace(/.mdx$/, "")}
+                  class="text-indigo-300 underline"
+                >
+                  {title}
+                </a>
+              </li>
+            );
+          }
+        })}
+      </ul>
+      <h2 class="mt-8 text-xl">対戦攻略</h2>
       <ul class="ml-2 mt-4">
         {Object.entries(posts).map(([id, module]) => {
           if (module.frontmatter) {
@@ -33,7 +60,7 @@ export default function Top() {
           }
         })}
       </ul>
-      <h2 class="mt-4 text-xl">テクニック</h2>
+      <h2 class="mt-8 text-xl">テクニック</h2>
       <ul class="ml-2 mt-4">
         {Object.entries(techniques).map(([id, module]) => {
           if (module.frontmatter) {
@@ -51,7 +78,7 @@ export default function Top() {
           }
         })}
       </ul>
-      <h2 class="mt-4 text-xl">データ</h2>
+      <h2 class="mt-8 text-xl">データ</h2>
       <ul class="ml-2 mt-4">
         <li class="mt-2">
           <a href="./statistics/hitBox" class="text-indigo-300 underline">
