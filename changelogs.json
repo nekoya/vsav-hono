@@ -1,0 +1,28 @@
+{
+  "changelogs": {
+    "@hono/vite-build": [
+      "https://github.com/honojs/vite-plugins/blob/main/packages/build/CHANGELOG.md"
+    ],
+    "@hono/vite-dev-server": [
+      "https://github.com/honojs/vite-plugins/blob/main/packages/dev-server/CHANGELOG.md"
+    ],
+    "autoprefixer": ["https://github.com/postcss/autoprefixer/releases"],
+    "hono": ["https://github.com/honojs/hono/releases"],
+    "honox": ["https://github.com/honojs/honox/releases"],
+    "ora": ["https://github.com/sindresorhus/ora/releases"],
+    "postcss": ["https://github.com/postcss/postcss/releases"],
+    "prettier": [
+      "https://github.com/prettier/prettier/blob/master/CHANGELOG.md"
+    ],
+    "prettier-plugin-tailwindcss": [
+      "https://github.com/tailwindlabs/prettier-plugin-tailwindcss/releases"
+    ],
+    "remark-gfm": ["https://github.com/remarkjs/remark-gfm/releases"],
+    "remark-mdx-frontmatter": [
+      "https://github.com/remcohaszing/remark-mdx-frontmatter/releases"
+    ],
+    "tailwindcss": ["https://github.com/tailwindlabs/tailwindcss"],
+    "vite": ["https://github.com/vitejs/vite/releases"],
+    "wrangler": ["https://github.com/cloudflare/workers-sdk/releases"]
+  }
+}
