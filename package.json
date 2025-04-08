@@ -13,6 +13,7 @@
     "commander": "13.1.0",
     "hono": "^4.6.10",
     "honox": "^0.1.26",
+    "ora": "8.2.0",
     "remark-frontmatter": "5.0.0",
     "remark-gfm": "4.0.0",
     "remark-mdx-frontmatter": "5.0.0",
