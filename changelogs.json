@@ -6,11 +6,10 @@
     "@hono/vite-dev-server": [
       "https://github.com/honojs/vite-plugins/blob/main/packages/dev-server/CHANGELOG.md"
     ],
-    "autoprefixer": ["https://github.com/postcss/autoprefixer/releases"],
+    "@mdx-js/rollup": ["https://github.com/mdx-js/mdx/releases"],
     "hono": ["https://github.com/honojs/hono/releases"],
     "honox": ["https://github.com/honojs/honox/releases"],
     "ora": ["https://github.com/sindresorhus/ora/releases"],
-    "postcss": ["https://github.com/postcss/postcss/releases"],
     "prettier": [
       "https://github.com/prettier/prettier/blob/master/CHANGELOG.md"
     ],
