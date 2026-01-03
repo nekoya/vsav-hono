@@ -21,19 +21,19 @@ function spawnAsync(
     let stdout = "";
     let stderr = "";
 
-    child.stdout.on("data", (data) => {
+    child.stdout.on("data", (data: Buffer) => {
       stdout += data;
     });
 
-    child.stderr.on("data", (data) => {
+    child.stderr.on("data", (data: Buffer) => {
       stderr += data;
     });
 
-    child.on("error", (err) => {
+    child.on("error", (err: Error) => {
       reject(err);
     });
 
-    child.on("close", (code) => {
+    child.on("close", (code: number | null) => {
       resolve({ stdout, stderr, code });
     });
   });
