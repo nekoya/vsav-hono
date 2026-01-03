@@ -21,6 +21,7 @@
     "@cloudflare/workers-types": "^4.20240529.0",
     "@hono/vite-build": "^1.0.0",
     "@hono/vite-dev-server": "^0.16.0",
+    "@tailwindcss/vite": "4.1.18",
     "@types/hast": "3.0.4",
     "@types/mdast": "4.0.4",
     "autoprefixer": "10.4.20",
