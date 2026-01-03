@@ -13,7 +13,7 @@ export default function ZoomImage(props: { src: string }) {
       </button>
       {zoom === true && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
+          className="fixed inset-0 flex items-center justify-center bg-black/75"
           onClick={() => setZoom(false)}
         >
           <img src={props.src} className="max-h-full max-w-full" />
